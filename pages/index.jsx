@@ -17,11 +17,11 @@ export default function Home() {
       </Head>
       <Header />
 
-      <section className="flex flex-col items-center mt-20">
-        <H1 className="text-7xl max-w-screen-lg text-center">
+      <section className="flex flex-col items-center mt-20 px-4">
+        <H1 className="lg:text-7xl text-2xl max-w-screen-lg text-center hero-title">
           Worship leader, Songwriter, Artist
         </H1>
-        <div className="flex  w-full max-w-screen-md shadow-lg mt-20">
+        <div className="flex  w-full max-w-screen-md shadow-lg mt-20 mobile-column">
           <img
             src="/ak-profile.jpeg"
             alt=""
@@ -87,6 +87,20 @@ export default function Home() {
 
         hr {
           border-top-color: #ccd5ae;
+        }
+
+        @media screen and (max-width: 425px) {
+          .mobile-column {
+            flex-direction: column;
+          }
+
+          .hero-img {
+            width: 100%;
+          }
+
+          .hero-title {
+            font-size: 3vw !important;
+          }
         }
       `}</style>
     </div>

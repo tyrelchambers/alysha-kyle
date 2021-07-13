@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMusic } from "@fortawesome/free-solid-svg-icons";
 import { faAmazon, faSpotify } from "@fortawesome/free-brands-svg-icons";
 import SocialWithLink from "../components/SocialWithLink/SocialWithLink";
+import Footer from "../layouts/Footer/Footer";
 const music = () => {
   return (
     <div className="w-full">
@@ -20,7 +21,7 @@ const music = () => {
         />
       </Head>
       <Header />
-      <main className="max-w-screen-lg mr-auto ml-auto mt-10">
+      <main className="max-w-screen-lg mr-auto ml-auto mt-10 px-4">
         <H1 className="text-4xl text-center text-gray-800">
           Alysha Kyle Music
         </H1>
@@ -28,16 +29,16 @@ const music = () => {
           <Socials />
         </div>
         <div className="flex flex-col w-full mt-10">
-          <h2 className="text-2xl flex gap-4 items-center">
+          <h2 className="text-2xl flex gap-4 items-center ">
             <hr className="w-full" /> Posture <hr className="w-full" />
           </h2>
-          <div className="flex mt-4">
+          <div className="flex mt-4 track-wrapper">
             <img
               src="/posture.png"
               alt="Posture"
               className="object-cover hero-img mr-8"
             />
-            <div className="hero-blurb w-full flex flex-col gap-4">
+            <div className="hero-blurb w-full flex flex-col gap-4 ">
               <p className="font-thin text-gray-500 ">
                 When I look at the world around me, it can get very discouraging
                 knowing there's very little I can do to change it. Sometimes I
@@ -72,7 +73,7 @@ const music = () => {
           <h2 className="text-2xl flex gap-4 items-center">
             <hr className="w-full" /> Worthy <hr className="w-full" />
           </h2>
-          <div className="flex mt-4">
+          <div className="flex mt-4 track-wrapper">
             <img
               src="/worthy.jpeg"
               alt="Worthy"
@@ -109,7 +110,7 @@ const music = () => {
             <hr className="w-full" /> Great Expectation
             <hr className="w-full" />
           </h2>
-          <div className="flex mt-4">
+          <div className="flex mt-4 track-wrapper">
             <img
               src="/ge.jpeg"
               alt="Great Expectation"
@@ -143,6 +144,7 @@ const music = () => {
           </div>
         </div>
       </main>
+      <Footer />
 
       <style jsx>{`
         .hero-img {
@@ -158,6 +160,18 @@ const music = () => {
         h2 {
           color: #8fa253;
           white-space: nowrap;
+        }
+
+        @media screen and (max-width: 425px) {
+          .track-wrapper {
+            flex-direction: column;
+          }
+
+          .track-wrapper img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 1em;
+          }
         }
       `}</style>
     </div>

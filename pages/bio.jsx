@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../layouts/Header/Header";
 import H1 from "../components/Headings/H1";
 import Socials from "../components/Socials/Socials";
+import Footer from "../layouts/Footer/Footer";
 const bio = () => {
   return (
     <div className="w-full">
@@ -17,7 +18,7 @@ const bio = () => {
       </Head>
       <Header />
 
-      <div className="max-w-screen-lg w-full ml-auto mr-auto flex gap-6 mt-10">
+      <div className="max-w-screen-lg w-full ml-auto mr-auto flex gap-6 mt-10 wrapper p-4">
         <img src="/ak-1.jpeg" alt="alysha kyle" className="avatar" />
         <div className="flex flex-col gap-6">
           <H1>Alysha Kyle</H1>
@@ -64,12 +65,23 @@ const bio = () => {
           ></iframe>
         </div>
       </div>
+      <Footer />
       <style jsx>{`
         .avatar {
-          aspect-ratio: 3 / 3;
           width: 300px;
           height: 300px;
         }
+
+        @media screen and (max-width: 425px) {
+          .wrapper {
+            flex-direction: column;
+          }
+
+          .avatar {
+            width: 100%;
+            height: auto;
+          }
+        } ;
       `}</style>
     </div>
   );
