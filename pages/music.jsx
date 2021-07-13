@@ -3,6 +3,10 @@ import Head from "next/head";
 import Header from "../layouts/Header/Header";
 import H1 from "../components/Headings/H1";
 import Socials from "../components/Socials/Socials";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMusic } from "@fortawesome/free-solid-svg-icons";
+import { faAmazon, faSpotify } from "@fortawesome/free-brands-svg-icons";
+import SocialWithLink from "../components/SocialWithLink/SocialWithLink";
 const music = () => {
   return (
     <div className="w-full">
@@ -50,6 +54,16 @@ const music = () => {
                 can be filled to overflowing with humility, grace and ultimately
                 His peace.
               </p>
+              <div className="flex gap-8">
+                <SocialWithLink
+                  href="https://music.apple.com/us/album/posture/1561733876?i=1561733877"
+                  icon={faMusic}
+                />
+                <SocialWithLink
+                  href="https://open.spotify.com/track/01025YqFXW6N1g0tRasABB?si=ae22748ddc3c4574"
+                  icon={faSpotify}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -72,6 +86,20 @@ const music = () => {
                 I pray that this song brings breakthrough in the lives of anyone
                 who declares that Jesus is worthy.
               </p>
+              <div className="flex gap-8">
+                <SocialWithLink
+                  href="https://music.apple.com/us/album/worthy/1551228881?i=1551228882"
+                  icon={faMusic}
+                />
+                <SocialWithLink
+                  href="https://open.spotify.com/track/3XD6q2WvyoBmdXMcsKiC8L?si=cdf49a8a9fcc4109"
+                  icon={faSpotify}
+                />
+                <SocialWithLink
+                  href="https://music.amazon.ca/albums/B08VCVFWFJ?marketplaceId=A2EUQ1WTGCTBG2&musicTerritory=CA&trackAsin=B08VDCNGP2"
+                  icon={faAmazon}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -97,6 +125,20 @@ const music = () => {
                 it looks like to find God on my knees and trust that his
                 goodness and mercy will follow me all the days of my life.
               </p>
+              <div className="flex gap-8">
+                <SocialWithLink
+                  href="https://music.apple.com/us/album/great-expectation/1546156148?i=1546156149"
+                  icon={faMusic}
+                />
+                <SocialWithLink
+                  href="https://open.spotify.com/track/27DqbjKIrPBEBqaBqwrsvB?si=24d30e95f2c64c39"
+                  icon={faSpotify}
+                />
+                <SocialWithLink
+                  href="https://music.amazon.ca/albums/B08R6Y998N?marketplaceId=A2EUQ1WTGCTBG2&musicTerritory=CA&trackAsin=B08R71W8D5"
+                  icon={faAmazon}
+                />
+              </div>
             </div>
           </div>
         </div>
