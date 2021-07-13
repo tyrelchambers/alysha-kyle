@@ -10,11 +10,14 @@ const NavLink = ({ children, href, className }) => {
       <a
         className={`${
           className ? className : ""
-        } font-thin text-gray-600  opacity-50 transition-all hover:opacity-100`}
+        } font-thin text-gray-600  transition-all hover:opacity-100`}
         aria-current={router.pathname === href ? "page" : null}
       >
         {children}
         <style jsx>{`
+          a {
+            opacity: 0.5;
+          }
           a[aria-current="page"] {
             color: #8fa253;
             opacity: 1;
