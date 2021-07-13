@@ -5,7 +5,7 @@ import H1 from "../components/Headings/H1";
 import Socials from "../components/Socials/Socials";
 const bio = () => {
   return (
-    <div className="p-4 w-full">
+    <div className="w-full">
       <Head>
         <title>Alysha Kyle | Bio</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
